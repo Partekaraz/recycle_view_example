@@ -13,7 +13,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     private List<UserModel> userModelList;
 
     public UserAdapter(List<UserModel> userModelList) {
-        this.userModelList = userModelList();
+        this.userModelList = userModelList;
     }
 
     @Override
@@ -30,11 +30,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     }
 
     @Override
-    public void getItemCount(){
+    public int getItemCount(){
         return userModelList.size();
     }
 
-    @Override
+
     public static class ViewHolder extends  RecyclerView.ViewHolder{
         private TextView name;
         public ViewHolder(View v){
